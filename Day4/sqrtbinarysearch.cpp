@@ -1,4 +1,19 @@
+ #include<iostream>
+ #include<bits/stdc++.h>
+ using namespace std;
+ double precision(int  temp,long long int N,int cnt)
+ {
+     double factor=1;
+     double ans=temp;
+     for(double i=temp; i<cnt;i++)
+     {
+         factor/=10;
+         for(double j=factor; j*j<N;j=j+factor)
+         ans=j;
+     }
 
+     return ans;
+ }
 int sqrtN(long long int N)
 {
     // Write your code here.
